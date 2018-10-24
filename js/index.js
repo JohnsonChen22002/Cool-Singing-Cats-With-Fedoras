@@ -1,6 +1,6 @@
 // Write your JS here
-import test from './script2.js';
-
+import save from './handlers.js';
+import test2 from './script2.js';
 // Declare your database
 var database = firebase.database();
 
@@ -16,3 +16,11 @@ databaseRef.once('value').then(function(snapshot) {
   // append the first name to the screen
   $('body').append(databaseValues['Img'].Image1);
 });
+
+
+  $('#submit').click(function(){
+    var storage = $("#input").val();
+    $("#messages").append(storage);
+  })
+  
+  console.log('test');
