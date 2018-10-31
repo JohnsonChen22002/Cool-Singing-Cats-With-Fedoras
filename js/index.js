@@ -14,7 +14,7 @@ databaseRef.once('value').then(function(snapshot) {
   //Log all the data to the console
   console.log(databaseValues);
   // append the first name to the screen
-  $('body').append(databaseValues['Img'].Image1);
+  $('#messages').append("<img style='width:50%' src="+ databaseValues['Img'].Image1 +">")
 });
 
 
