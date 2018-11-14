@@ -14,18 +14,21 @@ databaseRef.on('value', function(snapshot) {
   //Log all the data to the console
   console.log(databaseValues);
   for (var key in databaseValues) {
-    $('#messages').append(JSON.stringify(databaseValues[key]));
+    // $('#messages').append(JSON.stringify(databaseValues[key]));
+    //clean html before loop
+    $('#messages').append("<img style='width:50%' src="+ databaseValues[key].url +">")
   }
   
   // append the first name to the screen
   // $('#messages').append("<img style='width:50%' src="+ databaseValues['Img'].Image1 +">")
+
 });
 
 
   $('#submit').click(function(){
-    var input = $("#input").val();
+    var url = $("#input").val();
     databaseRef.push({
-      "test": input
+      "url": url
     })
   })
   
