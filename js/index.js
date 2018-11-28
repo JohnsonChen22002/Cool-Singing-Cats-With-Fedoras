@@ -13,12 +13,16 @@ databaseRef.on('value', function(snapshot) {
   const databaseValues = snapshot.val();
   //Log all the data to the console
   console.log(databaseValues);
+  var pic= [
+
+  ];
   for (var key in databaseValues) {
     // $('#messages').append(JSON.stringify(databaseValues[key]));
     //clean html before loop
-    $('#messages').append("<img style='width:50%' src="+ databaseValues[key].url +">")
-  }
-  
+    pic.push("<img style='width:50%' src="+ databaseValues[key].url +">")
+  }; 
+var reverse= pic.reverse()
+  $('#messages').html(reverse.join())
   // append the first name to the screen
   // $('#messages').append("<img style='width:50%' src="+ databaseValues['Img'].Image1 +">")
 
@@ -30,7 +34,8 @@ databaseRef.on('value', function(snapshot) {
     databaseRef.push({
       "url": url
     })
-  })
+    $('#input').val('');
+    })
   
   console.log('test');
 
