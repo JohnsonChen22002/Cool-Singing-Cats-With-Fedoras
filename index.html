@@ -11,13 +11,19 @@
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
+    <div class="container">
+        <div class="input-group mb-3 col-md-6 offset-md-3">
+            <input type="text" class="form-control" placeholder="Image URL (e.g. http://example.com/img.jpg)">
+            <div class="input-group-append">
+              <span class="input-group-text" id="submit">Submit</span>
+            </div>
+          </div>
+      <!-- <div class="row">
         <button type="button" class="btn btn-primary" id="submit">Send</button>
         <Input id="input">
-      </div>
+      </div> -->
       <div class="row">
-          <div class="col-12" id="messages"></div>
+          <div class="col-md-6 offset-md-3" id="messages"></div>
         </div> 
     </div> 
     

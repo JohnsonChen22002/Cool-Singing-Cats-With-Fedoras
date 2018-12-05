@@ -19,8 +19,10 @@ databaseRef.on('value', function(snapshot) {
   for (var key in databaseValues) {
     // $('#messages').append(JSON.stringify(databaseValues[key]));
     //clean html before loop
-    pic.push("<img style='width:50%' src="+ databaseValues[key].url +">")
+    // pic.push("<img style='width:50%' src="+ databaseValues[key].url +">")
+    pic.push("<img style='width:75%; display:block; margin:auto;' src="+ databaseValues[key].url +">")
   }; 
+  
 var reverse= pic.reverse()
   $('#messages').html(reverse.join())
   // append the first name to the screen
@@ -28,6 +30,13 @@ var reverse= pic.reverse()
 
 });
 
+// inputString.indexOf('http://') > -1 || inputString.indexOf('https://') > -1 
+
+// if (c) {
+  
+// } else {
+  
+// }
 
   $('#submit').click(function(){
     var url = $("#input").val();
